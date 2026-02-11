@@ -114,7 +114,9 @@ const App: React.FC = () => {
     { name: 'Laravel', icon: 'https://cdn.simpleicons.org/laravel/FF2D20' },
     { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
     { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
+    { name: 'n8n', icon: 'https://cdn.simpleicons.org/n8n/EF6C00' },
   ];
+
 
   const skillGroups = [
     {
@@ -189,7 +191,7 @@ const App: React.FC = () => {
             <div className="text-center mb-12">
               <h1 className="text-5xl md:text-6xl font-bold mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-pulse">
-                  JOSHUA DANIEL DAVID
+                  LOADING ...
                 </span>
               </h1>
               <div className="h-1 w-64 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mx-auto" />
@@ -423,14 +425,14 @@ const App: React.FC = () => {
               </p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-2 relative px-2">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-[0_0_30px_rgba(0,255,255,0.5)]">
-                  LOADING ...
+                  JOSHUA DANIEL DAVID
                 </span>
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400/20 to-purple-600/20 blur-xl -z-10" />
               </h1>
               <div className="flex items-center justify-center gap-2 sm:gap-4 mt-4 px-2">
                 <div className="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent to-cyan-400" />
                 <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-gray-300 tracking-wider uppercase text-center">
-                  Computer Science Graduate | Magna Cum Laude | EDPSE
+                  AI Business Process Analyst | Full Stack Web and App Developer
                 </p>
                 <div className="h-px w-8 sm:w-16 bg-gradient-to-l from-transparent to-cyan-400" />
               </div>
@@ -485,9 +487,8 @@ const App: React.FC = () => {
             </div>
 
             <p className="text-sm sm:text-base text-gray-300 max-w-3xl mx-auto leading-relaxed border-l-2 border-cyan-400/50 pl-3 sm:pl-4 text-left">
-              Full-stack developer specializing in cross-platform apps and cloud-based systems. Experienced in React Native, Laravel, and cloud platforms (Supabase, Firebase) with a strong background in AI/NLP. Proven record in building scalable, mobile-first solutions and presenting research at national and international tech conferences.
+              AI Automation Business Analyst and Full-Stack Developer with experience analyzing business workflows, designing AI-driven automation, and building scalable web and mobile applications using modern frameworks, cloud platforms, and NLP technologies.            
             </p>
-
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-6 sm:mt-8">
               <a
                 href="/resume.pdf"
@@ -569,7 +570,7 @@ const App: React.FC = () => {
                 </div>
               </div>
               <p className="text-gray-400 mb-4 text-xs sm:text-sm">
-                Pop AI Technologies | October 2025 - January 2026
+                Pop AI Technologies | October 2025 - February 2026
               </p>
               <div className="h-px w-full bg-gradient-to-r from-cyan-400/50 to-transparent mb-4" />
               <ul className="text-sm sm:text-base text-gray-300 leading-relaxed space-y-2">
@@ -676,7 +677,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Projects Section - Mission Select Style */}
-      <section id="projects" className="relative min-h-screen py-16 sm:py-24 md:py-32 px-4 sm:px-6">
+      <section id="projects" className="relative min-h-screen py-10 sm:py-2 md:py-10 px-4 sm:px-6">
         <div className="absolute inset-0 bg-gradient-radial from-blue-900/10 via-transparent to-transparent" />
         
         <div className="relative max-w-7xl mx-auto z-20">
@@ -767,7 +768,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Skills Section - Inventory Style */}
-      <section id="skills" className="relative min-h-screen py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-black/40">
+      <section id="skills" className="relative min-h-screen py-10 sm:py-8 md:py-100 px-4 sm:px-6 bg-black/40">
         <div className="absolute inset-0 bg-gradient-radial from-purple-900/10 via-transparent to-transparent" />
         
         <div className="relative max-w-7xl mx-auto z-20">
