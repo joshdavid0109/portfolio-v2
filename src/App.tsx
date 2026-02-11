@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from 'react';
 const App: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [activeSection, setActiveSection] = useState<string>('home');
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [loading, setLoading] = useState<boolean>(true);
   const [loadingProgress, setLoadingProgress] = useState<number>(0);
   const [currentPhase, setCurrentPhase] = useState<string>('INITIALIZING SYSTEM');
@@ -295,15 +294,6 @@ const App: React.FC = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-x-hidden font-['Orbitron',sans-serif] custom-cursor animate-fade-in">
-      {/* Custom cursor */}
-      <div
-        className="fixed w-6 h-6 border-2 border-cyan-400 rounded-full pointer-events-none z-50 mix-blend-difference transition-transform duration-100"
-        style={{
-          left: `${mousePosition.x}px`,
-          top: `${mousePosition.y}px`,
-          transform: 'translate(-50%, -50%)',
-        }}
-      />
 
       {/* Animated grid overlay */}
       <div className="fixed inset-0 opacity-10 pointer-events-none z-0">
