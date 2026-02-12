@@ -1,14 +1,38 @@
 import React, { useEffect, useRef, useState } from 'react';
+import dx1 from "./assets/dx1.png";
+import dx2 from "./assets/dx2.png";
+import dx3 from "./assets/dx3.png";
+
+import ap2 from "./assets/ap2.png";
+import ap3 from "./assets/ap3.png";
+import ap4 from "./assets/ap4.png";
+
+import lm1 from "./assets/lm1.png";
+import lm2 from "./assets/lm2.png";
+import lm3 from "./assets/lm3.png"; 
+import lm4 from "./assets/lm4.png"; 
+import lm5 from "./assets/lm5.png"; 
+
+import m1 from "./assets/1.png";
+import m2 from "./assets/2.png";
+import m3 from "./assets/3.png";
+import m4 from "./assets/4.png";
+
+import bpxw from "./assets/bpx-w.png";
+
+import st1 from "./assets/st1.png";
+import st2 from "./assets/st2.png";
+import st3 from "./assets/st3.png";
 
 const App: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [activeSection, setActiveSection] = useState<string>('home');
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [loading, setLoading] = useState<boolean>(true);
   const [loadingProgress, setLoadingProgress] = useState<number>(0);
   const [currentPhase, setCurrentPhase] = useState<string>('INITIALIZING SYSTEM');
   const [fadeOut, setFadeOut] = useState<boolean>(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  const [imageIndexes, setImageIndexes] = useState<{ [key: number]: number }>({});
 
   // Loading animation effect
   useEffect(() => {
@@ -75,7 +99,23 @@ const App: React.FC = () => {
       title: "D'Xplorer Travel & Tours Web & App",
       desc: "Cross-platform Travel and Tours booking app using React Native & React (TypeScript) with PostgreSQL (Supabase): RPC, Edge Functions, Webhooks, Xendit Payment Integration. Admin panel for managing users, bookings, and content.",
       tech: "React Native, React, Supabase, Tailwind",
-      image: "/projects/dxplorer/cover.png",
+      gallery: [dx1, dx2, dx3, m1],
+      liveUrl: "https://dxplorer.app",
+      repoUrl: "https://github.com/joshdavid0109/dxplorer",
+    },
+    {
+      title: "Astoria Prime",
+      desc: "A scalable auction and marketplace web platform designed to streamline product listings, bidding, and transactions.",
+      tech: "React Native, React, Supabase, Tailwind",
+      gallery: [ap2, ap3, ap4],
+      liveUrl: "https://dxplorer.app",
+      repoUrl: "https://github.com/joshdavid0109/dxplorer",
+    },
+    {
+      title: "Loan Management System",
+      desc: "A comprehensive loan management system that automates loan processing, tracking, and reporting.",
+      tech: "React Native, React, Supabase, TypeScript",
+      gallery: [lm1, lm2, lm3, lm4, lm5, m4],
       liveUrl: "https://dxplorer.app",
       repoUrl: "https://github.com/joshdavid0109/dxplorer",
     },
@@ -83,23 +123,15 @@ const App: React.FC = () => {
       title: "Blue Phoenix Reviewer App and Web CMS",
       desc: "Bar Exam preparation mobile app (Android/iOS) using React Native (TypeScript) with PostgreSQL (Supabase): RPC, Edge Functions, Webhooks, Real-time. CMS for admin using React to edit content of reviewers.",
       tech: "React Native, React, Supabase, TypeScript",
-      image: "/projects/dxplorer/cover.png",
-      liveUrl: "https://dxplorer.app",
-      repoUrl: "https://github.com/joshdavid0109/dxplorer",
-    },
-    {
-      title: "Ilocano Language Learning App",
-      desc: "Adaptive gamified learning using sequence-to-sequence model for translating English to Ilocano sentences with interactive exercises and progress tracking.",
-      tech: "Flask, Bootstrap, Seq2Seq NLP",
-      image: "/projects/dxplorer/cover.png",
+      gallery: [m2, m3, bpxw],
       liveUrl: "https://dxplorer.app",
       repoUrl: "https://github.com/joshdavid0109/dxplorer",
     },
     {
       title: "Cloud-based RoBERTa SDG Assessment Tool",
       desc: "Machine Learning Model (RoBERTa) trained with scraped data from different HEIs in the Philippines integrated in a website to assess HEI documents with their compliance to SDG.",
-      tech: "NLP, RoBERTa, Google Cloud, Python",
-      image: "/projects/dxplorer/cover.png",
+      tech: "Python, NLP, RoBERTa, Google Cloud",
+      gallery: [st1, st2, st3],
       liveUrl: "https://dxplorer.app",
       repoUrl: "https://github.com/joshdavid0109/dxplorer",
     },
@@ -144,7 +176,7 @@ const App: React.FC = () => {
     {
       title: 'Tools',
       skills: [
-        'Git', 'n8n', 'Figma', 'Docker', 'Postman', 'VS Code',
+        'Git', 'n8n', 'Figma', 'Docker', 'Postman', 'VS Code', 'JIRA', 'OpenProject',
       ],
     },
     {
@@ -295,15 +327,6 @@ const App: React.FC = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-x-hidden font-['Orbitron',sans-serif] custom-cursor animate-fade-in">
-      {/* Custom cursor */}
-      <div
-        className="fixed w-6 h-6 border-2 border-cyan-400 rounded-full pointer-events-none z-50 mix-blend-difference transition-transform duration-100"
-        style={{
-          left: `${mousePosition.x}px`,
-          top: `${mousePosition.y}px`,
-          transform: 'translate(-50%, -50%)',
-        }}
-      />
 
       {/* Animated grid overlay */}
       <div className="fixed inset-0 opacity-10 pointer-events-none z-0">
@@ -421,7 +444,7 @@ const App: React.FC = () => {
 
             <div className="relative">
               <p className="text-cyan-400 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] mb-3 sm:mb-4 uppercase animate-flicker">
-                // System.Initialize()
+              {'// '} System.Initialize()
               </p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-2 relative px-2">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-[0_0_30px_rgba(0,255,255,0.5)]">
@@ -510,7 +533,7 @@ const App: React.FC = () => {
 
             {/* Tech Stack Icons */}
             <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-cyan-500/30">
-              <p className="text-cyan-400 mb-4 sm:mb-6 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase">// Tech Stack</p>
+              <p className="text-cyan-400 mb-4 sm:mb-6 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase">{'// '} Tech Stack</p>
               <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center max-w-4xl mx-auto">
                 {techStack.map((tech, i) => (
                   <div
@@ -544,7 +567,7 @@ const App: React.FC = () => {
         
         <div className="relative max-w-4xl mx-auto z-20">
           <div className="text-center mb-12 sm:mb-16">
-            <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">// Quest Log</p>
+            <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">{'// '}Quest Log</p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
                 EXPERIENCE
@@ -587,7 +610,7 @@ const App: React.FC = () => {
           <div className="mt-12 sm:mt-16">
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase">
-                // Education
+                {'// '} Education
               </p>
               <div className="h-px flex-1 bg-gradient-to-r from-cyan-400/50 to-transparent" />
             </div>
@@ -649,7 +672,7 @@ const App: React.FC = () => {
           <div className="mt-12 sm:mt-16">
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase">
-                // Certifications & Achievements
+                {'// '}Certifications & Achievements
               </p>
               <div className="h-px flex-1 bg-gradient-to-r from-cyan-400/50 to-transparent" />
             </div>
@@ -677,12 +700,12 @@ const App: React.FC = () => {
       </section>
 
       {/* Projects Section - Mission Select Style */}
-      <section id="projects" className="relative min-h-screen py-10 sm:py-2 md:py-10 px-4 sm:px-6">
+      <section id="projects" className="relative py-20 px-4 sm:px-6">
         <div className="absolute inset-0 bg-gradient-radial from-blue-900/10 via-transparent to-transparent" />
         
         <div className="relative max-w-7xl mx-auto z-20">
           <div className="text-center mb-12 sm:mb-16">
-            <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">// Mission Archives</p>
+            <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">{'// '}Mission Archives</p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
                 FEATURED PROJECTS
@@ -698,20 +721,84 @@ const App: React.FC = () => {
                 className="group relative bg-black/60 border-2 border-cyan-500/30 overflow-hidden hover:border-cyan-400 transition-all"
               >
                 {/* Image Preview */}
-                {project.image && (
-                  <div className="relative h-40 sm:h-48 overflow-hidden border-b border-cyan-500/30">
+                {(project.gallery?.length || project.image) && (
+                  <div className="relative aspect-[17/9]  overflow-hidden border-b border-cyan-500/30">
+
+                    {/* Determine current image */}
                     <img
-                      src={project.image}
+                      src={
+                        project.gallery
+                          ? project.gallery[imageIndexes[i] || 0]
+                          : project.image
+                      }
                       alt={project.title}
-                      className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    {/* Image overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+                    {/* Left Arrow */}
+                    {project.gallery && project.gallery.length > 1 && (
+                      <button
+                        onClick={() =>
+                          setImageIndexes((prev) => {
+                            const current = prev[i] ?? 0;
+                            const total = project.gallery!.length;
+                            return {
+                              ...prev,
+                              [i]: current === 0 ? total - 1 : current - 1,
+                            };
+                          })
+                        }
+                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white px-2 py-1 text-xs border border-cyan-400/50 hover:bg-cyan-400/20"
+                      >
+                        ‹
+                      </button>
+                    )}
+
+                    {/* Right Arrow */}
+                    {project.gallery && project.gallery.length > 1 && (
+                      <button
+                        onClick={() =>
+                          setImageIndexes((prev) => {
+                            const current = prev[i] ?? 0;
+                            const total = project.gallery!.length;
+                            return {
+                              ...prev,
+                              [i]: current === total - 1 ? 0 : current + 1,
+                            };
+                          })
+                        }
+
+                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white px-2 py-1 text-xs border border-cyan-400/50 hover:bg-cyan-400/20"
+                      >
+                        ›
+                      </button>
+                    )}
+
+                    {/* Image Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+
                     <div className="absolute bottom-2 left-4 text-cyan-400 text-xs tracking-widest">
                       PROJECT #{String(i + 1).padStart(2, '0')}
                     </div>
+
+                    {/* Dots Indicator */}
+                    {project.gallery && project.gallery.length > 1 && (
+                      <div className="absolute bottom-2 right-4 flex gap-1">
+                        {project.gallery.map((_, index) => (
+                          <div
+                            key={index}
+                            className={`w-2 h-2 rounded-full ${
+                              (imageIndexes[i] || 0) === index
+                                ? "bg-cyan-400"
+                                : "bg-gray-500"
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    )}
                   </div>
                 )}
+
 
                 {/* Content */}
                 <div className="p-6 sm:p-8 relative z-10">
@@ -773,7 +860,7 @@ const App: React.FC = () => {
         
         <div className="relative max-w-7xl mx-auto z-20">
           <div className="text-center mb-12 sm:mb-16">
-            <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">// Skill Tree</p>
+            <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">{'// '} Skill Tree</p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
                 ABILITIES & TECH
@@ -788,7 +875,7 @@ const App: React.FC = () => {
                 {/* Category Title */}
                 <div className="flex items-center gap-4 mb-4 sm:mb-6">
                   <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase">
-                    // {group.title}
+                    {'// '} {group.title}
                   </p>
                   <div className="h-px flex-1 bg-gradient-to-r from-cyan-400/50 to-transparent" />
                 </div>
