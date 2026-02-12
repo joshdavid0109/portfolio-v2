@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 const App: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [activeSection, setActiveSection] = useState<string>('home');
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [loading, setLoading] = useState<boolean>(true);
   const [loadingProgress, setLoadingProgress] = useState<number>(0);
   const [currentPhase, setCurrentPhase] = useState<string>('INITIALIZING SYSTEM');
@@ -294,6 +295,15 @@ const App: React.FC = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-x-hidden font-['Orbitron',sans-serif] custom-cursor animate-fade-in">
+      {/* Custom cursor */}
+      <div
+        className="fixed w-6 h-6 border-2 border-cyan-400 rounded-full pointer-events-none z-50 mix-blend-difference transition-transform duration-100"
+        style={{
+          left: `${mousePosition.x}px`,
+          top: `${mousePosition.y}px`,
+          transform: 'translate(-50%, -50%)',
+        }}
+      />
 
       {/* Animated grid overlay */}
       <div className="fixed inset-0 opacity-10 pointer-events-none z-0">
@@ -411,7 +421,7 @@ const App: React.FC = () => {
 
             <div className="relative">
               <p className="text-cyan-400 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] mb-3 sm:mb-4 uppercase animate-flicker">
-              {'// '} System.Initialize()
+                // System.Initialize()
               </p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-2 relative px-2">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-[0_0_30px_rgba(0,255,255,0.5)]">
@@ -500,7 +510,7 @@ const App: React.FC = () => {
 
             {/* Tech Stack Icons */}
             <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-cyan-500/30">
-              <p className="text-cyan-400 mb-4 sm:mb-6 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase">{'// '} Tech Stack</p>
+              <p className="text-cyan-400 mb-4 sm:mb-6 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase">// Tech Stack</p>
               <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center max-w-4xl mx-auto">
                 {techStack.map((tech, i) => (
                   <div
@@ -534,7 +544,7 @@ const App: React.FC = () => {
         
         <div className="relative max-w-4xl mx-auto z-20">
           <div className="text-center mb-12 sm:mb-16">
-            <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">{'// '}Quest Log</p>
+            <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">// Quest Log</p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
                 EXPERIENCE
@@ -577,7 +587,7 @@ const App: React.FC = () => {
           <div className="mt-12 sm:mt-16">
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase">
-                {'// '} Education
+                // Education
               </p>
               <div className="h-px flex-1 bg-gradient-to-r from-cyan-400/50 to-transparent" />
             </div>
@@ -639,7 +649,7 @@ const App: React.FC = () => {
           <div className="mt-12 sm:mt-16">
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase">
-                {'// '}Certifications & Achievements
+                // Certifications & Achievements
               </p>
               <div className="h-px flex-1 bg-gradient-to-r from-cyan-400/50 to-transparent" />
             </div>
@@ -672,7 +682,7 @@ const App: React.FC = () => {
         
         <div className="relative max-w-7xl mx-auto z-20">
           <div className="text-center mb-12 sm:mb-16">
-            <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">{'// '}Mission Archives</p>
+            <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">// Mission Archives</p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
                 FEATURED PROJECTS
@@ -763,7 +773,7 @@ const App: React.FC = () => {
         
         <div className="relative max-w-7xl mx-auto z-20">
           <div className="text-center mb-12 sm:mb-16">
-            <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">{'// '} Skill Tree</p>
+            <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">// Skill Tree</p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
                 ABILITIES & TECH
@@ -778,7 +788,7 @@ const App: React.FC = () => {
                 {/* Category Title */}
                 <div className="flex items-center gap-4 mb-4 sm:mb-6">
                   <p className="text-cyan-400 text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase">
-                    {'// '} {group.title}
+                    // {group.title}
                   </p>
                   <div className="h-px flex-1 bg-gradient-to-r from-cyan-400/50 to-transparent" />
                 </div>
