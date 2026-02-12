@@ -514,7 +514,7 @@ const App: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-6 sm:mt-8">
               <a
-                href="/resume.pdf"
+                href="https://yyhgylabobrhkqzoqiik.supabase.co/storage/v1/object/public/cv/JoshuaDavid_Resume2026.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="relative group px-6 sm:px-8 py-3 border-2 border-cyan-400 text-cyan-400 uppercase tracking-widest text-xs sm:text-sm overflow-hidden"
