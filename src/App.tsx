@@ -817,30 +817,6 @@ const App: React.FC = () => {
                     </p>
                     <div className="h-px flex-1 bg-cyan-400/30" />
                   </div>
-
-                  {/* Actions */}
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="px-4 sm:px-5 py-2 border border-cyan-400 text-cyan-400 text-xs uppercase tracking-widest hover:bg-cyan-400/10 transition-all clip-corner-sm text-center"
-                      >
-                        Live Demo
-                      </a>
-                    )}
-                    {project.repoUrl && (
-                      <a
-                        href={project.repoUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="px-4 sm:px-5 py-2 border border-purple-400 text-purple-400 text-xs uppercase tracking-widest hover:bg-purple-400/10 transition-all clip-corner-sm text-center"
-                      >
-                        Source Code
-                      </a>
-                    )}
-                  </div>
                 </div>
 
                 {/* Scan line */}
