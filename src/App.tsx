@@ -97,7 +97,7 @@ const App: React.FC = () => {
   const projects: Project[] = [
     {
       title: "D'Xplorer Travel & Tours Web & App",
-      desc: "Cross-platform Travel and Tours booking app using React Native & React (TypeScript) with PostgreSQL (Supabase): RPC, Edge Functions, Webhooks, Xendit Payment Integration. Admin panel for managing users, bookings, and content.",
+      desc: "Cross-platform Travel and Tours booking app with Admin panel using React Native & React (TypeScript) with PostgreSQL (Supabase): RPC, Edge Functions, Webhooks, Xendit Payment Integration. Admin panel for managing users, bookings, and content.",
       tech: "React Native, React, Supabase, Tailwind",
       gallery: [dx1, dx2, dx3, m1],
       liveUrl: "https://dxplorer.app",
@@ -105,7 +105,7 @@ const App: React.FC = () => {
     },
     {
       title: "Astoria Prime",
-      desc: "A scalable auction and marketplace web platform designed to streamline product listings, bidding, and transactions.",
+      desc: "A scalable auction and marketplace web platform with Admin panel designed to streamline product listings, bidding, and transactions.",
       tech: "React Native, React, Supabase, Tailwind",
       gallery: [ap2, ap3, ap4],
       liveUrl: "https://dxplorer.app",
