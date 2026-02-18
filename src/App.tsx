@@ -130,7 +130,7 @@ const App: React.FC = () => {
     {
       title: "Cloud-based RoBERTa SDG Assessment Tool",
       desc: "Machine Learning Model (RoBERTa) trained with scraped data from different HEIs in the Philippines integrated in a website to assess HEI documents with their compliance to SDG.",
-      tech: "Python, NLP, RoBERTa, Google Cloud",
+      tech: "Python (Flask), Bootstrap, Node.js, NLP, RoBERTa, Google Cloud",
       gallery: [st1, st2, st3],
       liveUrl: "https://dxplorer.app",
       repoUrl: "https://github.com/joshdavid0109/dxplorer",
