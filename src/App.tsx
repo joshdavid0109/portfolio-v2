@@ -100,21 +100,21 @@ const App: React.FC = () => {
       desc: "Cross-platform Travel and Tours booking app with Admin panel using React Native & React (TypeScript) with PostgreSQL (Supabase): RPC, Edge Functions, Webhooks, Xendit Payment Integration. Admin panel for managing users, bookings, and content.",
       tech: "React Native, React, Supabase, Tailwind",
       gallery: [dx1, dx2, dx3, m1],
-      liveUrl: "https://dxplorer.app",
+      liveUrl: "https://dxtravels.online",
       repoUrl: "https://github.com/joshdavid0109/dxplorer",
     },
     {
       title: "Astoria Prime",
       desc: "A scalable auction and marketplace web platform with Admin panel designed to streamline product listings, bidding, and transactions.",
-      tech: "React Native, React, Supabase, Tailwind",
+      tech: "React, Supabase (PostgreSQL), Tailwind",
       gallery: [ap2, ap3, ap4],
-      liveUrl: "https://dxplorer.app",
+      liveUrl: "https://astoriaprime.ca",
       repoUrl: "https://github.com/joshdavid0109/dxplorer",
     },
     {
       title: "Loan Management System",
       desc: "A comprehensive loan management system that automates loan processing, tracking, and reporting.",
-      tech: "React Native, React, Supabase, TypeScript",
+      tech: "React, React MatoveSupabase, TypeScript",
       gallery: [lm1, lm2, lm3, lm4, lm5, m4],
       liveUrl: "https://dxplorer.app",
       repoUrl: "https://github.com/joshdavid0109/dxplorer",
@@ -817,6 +817,18 @@ const App: React.FC = () => {
                     </p>
                     <div className="h-px flex-1 bg-cyan-400/30" />
                   </div>
+                  {/* {project.liveUrl && (
+                    <div className="mt-4">
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-block text-xs sm:text-sm text-cyan-400 hover:text-white border border-cyan-400/40 hover:border-cyan-400 px-4 py-2 uppercase tracking-wider transition-all hover:bg-cyan-400/10"
+                      >
+                        🔗 View Live Project
+                      </a>
+                    </div>
+                  )} */}
                 </div>
 
                 {/* Scan line */}
