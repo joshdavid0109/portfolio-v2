@@ -6,6 +6,7 @@ import dx3 from "./assets/dx3.png";
 import ap2 from "./assets/ap2.png";
 import ap3 from "./assets/ap3.png";
 import ap4 from "./assets/ap4.png";
+import ap5 from "./assets/ap5.png";
 
 import lm1 from "./assets/lm1.png";
 import lm2 from "./assets/lm2.png";
@@ -107,7 +108,7 @@ const App: React.FC = () => {
       title: "Astoria Prime",
       desc: "A scalable auction and marketplace web platform with Admin panel designed to streamline product listings, bidding, and transactions.",
       tech: "React, Supabase (PostgreSQL), Tailwind",
-      gallery: [ap2, ap3, ap4],
+      gallery: [ap2, ap5, ap3, ap4],
       liveUrl: "https://astoriaprime.ca",
       repoUrl: "https://github.com/joshdavid0109/dxplorer",
     },
