@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageSquare, X, Send, Bot, User, Zap, AlertCircle, Cpu } from 'lucide-react';
+import { MessageSquare, X, Send, Bot, User, AlertCircle, Cpu } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { portfolioData } from '../../data/portfolio';
 import { HfInference } from "@huggingface/inference";
