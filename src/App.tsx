@@ -151,7 +151,6 @@ const App: React.FC = () => {
             animate={{ x: 0, opacity: 1 }}
             className="text-2xl font-black text-cyan-400 tracking-tighter cursor-default"
           >
-            JD<span className="text-white">.DEV</span>
           </motion.div>
 
           <div className="hidden md:flex items-center gap-8">

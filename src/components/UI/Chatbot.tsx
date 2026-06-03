@@ -97,9 +97,9 @@ const Chatbot: React.FC = () => {
             const hf = new HfInference(cleanToken);
 
             // Using Chat Completion (more modern and reliable provider routing)
-            // Llama-3.2-3B is highly optimized and widely available
+            // Using Zephyr which is fully open and doesn't require gated access
             const response = await hf.chatCompletion({
-                model: 'meta-llama/Llama-3.2-3B-Instruct',
+                model: 'Qwen/Qwen2.5-72B-Instruct',
                 messages: [
                     { role: 'system', content: getSystemContext() },
                     { role: 'user', content: userMsg.content }
@@ -181,7 +181,17 @@ const Chatbot: React.FC = () => {
                                                 : 'bg-purple-900/20 border border-purple-500/30 text-purple-100'
                                             }`}>
                                             {msg.isError && <AlertCircle size={10} className="inline mr-1 text-red-400 mb-0.5" />}
-                                            {msg.content}
+                                            {msg.role === 'bot' && !msg.isError ? (
+                                                <span dangerouslySetInnerHTML={{
+                                                    __html: msg.content
+                                                        .replace(/\*\*(.*?)\*\*/g, '<strong class="text-purple-300 font-bold">$1</strong>')
+                                                        .replace(/\*(.*?)\*/g, '<em class="text-purple-300">$1</em>')
+                                                        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noreferrer" class="text-cyan-400 hover:underline font-bold">$1</a>')
+                                                        .replace(/\n/g, '<br />')
+                                                }} />
+                                            ) : (
+                                                msg.content
+                                            )}
                                         </div>
                                     </div>
                                 </div>

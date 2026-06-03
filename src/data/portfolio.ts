@@ -47,11 +47,22 @@ export const portfolioData = {
         email: "joshdan.david@gmail.com",
         phone: "+63 960 836 0277",
         location: "Baguio City, Philippines",
-        linkedin: "https://www.linkedin.com/in/joshuadanieldavid",
+        linkedin: "https://www.linkedin.com/in/joshua-daniel-david",
         github: "https://github.com/joshdavid0109",
         resume: "https://yyhgylabobrhkqzoqiik.supabase.co/storage/v1/object/public/cv/JoshuaDavid_Resume2026.pdf"
     },
     experience: [
+        {
+            role: "Software Engineer",
+            company: "Freelance",
+            period: "July 2025 - Present",
+            type: "FULL-TIME",
+            details: [
+                "Developed and maintained scalable web and mobile applications",
+                "Collaborated with cross-functional teams to design and implement new features",
+                "Optimized application performance and improved user experience"
+            ]
+        },
         {
             role: "AI Business Process Analyst",
             company: "Pop AI Technologies",
@@ -94,8 +105,7 @@ export const portfolioData = {
             desc: "Cross-platform Travel and Tours booking app with Admin panel using React Native & React (TypeScript) with PostgreSQL (Supabase): RPC, Edge Functions, Webhooks, Xendit Payment Integration. Admin panel for managing users, bookings, and content.",
             tech: "React Native, React, Supabase, Tailwind",
             gallery: [dx1, dx2, dx3, m1],
-            liveUrl: "https://dxtravels.online",
-            repoUrl: "https://github.com/joshdavid0109/dxplorer",
+            liveUrl: "https://www.dxtravels.online",
         },
         {
             title: "Astoria Prime",
@@ -103,37 +113,30 @@ export const portfolioData = {
             tech: "React, Supabase (PostgreSQL), Tailwind",
             gallery: [ap2, ap5, ap3, ap4, ap1],
             liveUrl: "https://astoriaprime.ca",
-            repoUrl: "https://github.com/joshdavid0109/dxplorer",
         },
         {
             title: "Loan Management System",
             desc: "A comprehensive loan management system that automates loan processing, tracking, and reporting.",
             tech: "React, React Native, Supabase, TypeScript",
             gallery: [lm1, lm2, lm3, lm4, lm5, m4],
-            liveUrl: "https://dxplorer.app",
-            repoUrl: "https://github.com/joshdavid0109/dxplorer",
         },
         {
             title: "Blue Phoenix Reviewer App and Web CMS",
             desc: "Bar Exam preparation mobile app (Android/iOS) using React Native (TypeScript) with PostgreSQL (Supabase): RPC, Edge Functions, Webhooks, Real-time. CMS for admin using React to edit content of reviewers.",
             tech: "React Native, React, Supabase, TypeScript",
             gallery: [m2, m3, bpxw],
-            liveUrl: "https://dxplorer.app",
-            repoUrl: "https://github.com/joshdavid0109/dxplorer",
         },
         {
             title: "Cloud-based RoBERTa SDG Assessment Tool",
             desc: "Machine Learning Model (RoBERTa) trained with scraped data from different HEIs in the Philippines integrated in a website to assess HEI documents with their compliance to SDG.",
             tech: "Python (Flask), Bootstrap, Node.js, NLP, RoBERTa, Google Cloud",
             gallery: [st1, st2, st3],
-            liveUrl: "https://dxplorer.app",
-            repoUrl: "https://github.com/joshdavid0109/dxplorer",
         },
     ],
     skills: [
         {
             title: 'Languages',
-            skills: ['Java', 'JavaScript', 'TypeScript', 'Python', 'PHP', 'Kotlin'],
+            skills: ['Java', 'JavaScript', 'TypeScript', 'Python', 'PHP', 'Kotlin', 'Swift', 'Flutter'],
         },
         {
             title: 'Frameworks & Libraries',

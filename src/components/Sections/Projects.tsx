@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { portfolioData } from '../../data/portfolio';
 
 const Projects: React.FC = () => {
@@ -24,7 +24,7 @@ const Projects: React.FC = () => {
         <section id="projects" className="py-32 px-6">
             <div className="max-w-7xl mx-auto">
                 <div className="flex items-center gap-4 mb-16">
-                    <h2 className="text-4xl font-black text-glow-cyan uppercase text-white">Missions</h2>
+                    <h2 className="text-4xl font-black text-glow-cyan uppercase text-white">Projects</h2>
                     <div className="h-px flex-1 bg-cyan-500/20" />
                 </div>
 
@@ -94,15 +94,12 @@ const Projects: React.FC = () => {
                                         </span>
                                     ))}
                                 </div>
-                                <div className="flex gap-4">
+                                
+                                {/* Links */}
+                                <div className="flex gap-4 pt-4 border-t border-cyan-500/20 mt-2">
                                     {project.liveUrl && (
-                                        <a href={project.liveUrl} target="_blank" rel="noreferrer" className="text-xs text-cyan-400 flex items-center gap-1 hover:underline font-bold">
-                                            <ExternalLink size={14} /> LIVE LINK
-                                        </a>
-                                    )}
-                                    {project.repoUrl && (
-                                        <a href={project.repoUrl} target="_blank" rel="noreferrer" className="text-xs text-gray-500 flex items-center gap-1 hover:text-white transition-colors font-bold">
-                                            <Github size={14} /> REPO
+                                        <a href={project.liveUrl} target="_blank" rel="noreferrer" className="text-cyan-400 hover:text-white flex items-center gap-1.5 text-xs uppercase tracking-widest font-bold transition-colors">
+                                            <ExternalLink size={14} /> Live
                                         </a>
                                     )}
                                 </div>

@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
                     className="space-y-6"
                 >
                     <div className="inline-block py-1 px-3 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-[10px] tracking-widest uppercase rounded">
-                        System Active: AI Business Process Analyst
+                        System Active: Software Engineer
                     </div>
                     <h1 className="text-5xl md:text-7xl font-black leading-none text-glow-cyan text-white">
                         {portfolioData.name.toUpperCase()}
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
 
                     <div className="flex flex-wrap gap-4 pt-4">
                         <a href="#projects" className="px-8 py-3 bg-cyan-500 text-black font-bold uppercase text-xs tracking-widest hover:bg-cyan-400 transition-all clip-corner shadow-[0_0_20px_rgba(0,255,255,0.4)]">
-                            View Missions
+                            View Projects
                         </a>
                         <a href={portfolioData.contact.resume} target="_blank" rel="noreferrer" className="px-8 py-3 border border-cyan-500 text-cyan-500 font-bold uppercase text-xs tracking-widest hover:bg-cyan-500/10 transition-all clip-corner flex items-center gap-2">
                             <Download size={16} /> Resume
