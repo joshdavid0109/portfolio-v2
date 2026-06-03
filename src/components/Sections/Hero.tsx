@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { portfolioData } from '../../data/portfolio';
 
 const Hero: React.FC = () => {
